@@ -1,6 +1,28 @@
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.dilbani{
+    background: rgb(110, 49, 2);
+}
+
+.imgDiv {
+    width: 200px;
+    margin: 0 auto;
+}
+
+footer {
+    padding: 1rem;
+    background: black;
+    margin: 0 auto;
+}
+.footerdil{
+    margin: 0 auto;
+    text-align: center;
+    color: aliceblue;
 }
 
 .banner {
@@ -30,4 +52,258 @@ body {
     background-color: black;
     opacity: 0.5;
     z-index: -1;
+}
+
+:root {
+    --primary: #9C2789;
+    --darkPrimary: #891190;
+    --secundary: #FFCE00;
+    --darSecundary: rgb(233, 287, 2);
+    --white: #fff;
+    --black: #000;
+    --secundaryFont:#E57C23;
+    --mainFont: 'Staatliches', cursive;
+}
+
+
+/*Globales*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+    max-width: 120vh;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secundary);
+    font-family: var(--mainFont);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/*Grid*/
+
+.grid {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+}
+
+
+/*Productos*/
+
+.img_container {
+    max-height:75% ;
+}
+
+.producto {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.producto__nombre {
+    font-size: 4rem;
+    color: var(--secundaryFont);
+}
+
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundary);
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--mainFont);
+    margin: .5rem;
+    text-align: center;
+    line-height: 1.2;
+    
+}
+
+.producto_description {
+    text-align: center;
+    font-family: var(--mainFont);
+    color: black;
+}
+
+.producto_unique{
+    grid-column: 1/3;
+}
+
+.producto_unique div img {
+    object-fit: contain;
+    margin: 1rem;
+}
+
+
+
+/*Graficos*/
+
+.grafico {
+    min-height: 30rem;
+    background-color: var(--darkPrimary);
+    padding: 1rem;
+    background-repeat: no-repeat;
+    grid-column: 1/3;
+    background-size: cover;
+}
+
+.grafico--camisa {
+    grid-row: 2/3;
+    background-image: url(https://images.pexels.com/photos/192933/pexels-photo-192933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.grafico--node {
+    background-image: url(https://images.pexels.com/photos/1047458/pexels-photo-1047458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    grid-row: 8/9;
+}
+
+@media (min-width: 768px) {
+    .grafico--camisa {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    .grafico--node {
+        grid-row: 4/5;
+        grid-column: 2/4;
+    }
+}
+
+@media (min-width: 768px) {
+    .grafico--camisa {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    .grafico--node {
+        grid-row: 4/5;
+        grid-column: 2/4;
+    }
+
+    .producto_unique {
+        grid-column: 3/4;
+    }
+}
+
+
+/*Iconos*/
+
+.iconos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width:768px) {
+    .iconos {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.iconos__titulos {
+    margin: 0;
+}
+
+.iconos__img {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+
+/*Compra*/
+
+@media (min-width:768px) {
+    .compra {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.formulario {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.formulario__campo {
+    border: 1rem solid var(--darkPrimary);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    padding: 1rem;
+    color: var(--white);
+    appearance: none;
+    min-width: 50%;
+}
+
+.formulario__boton {
+    grid-column: 1/3;
+    background-color: var(--secundary);
+    font-family: var(--mainFont);
+    font-size: 2rem;
+    border: none;
+    padding: 2rem;
+    transition: background-color .5s ease;
+}
+
+.formulario__boton:hover {
+    cursor: pointer;
+    background-color: var(--darSecundary);
+}
+
+.formulario__boton:hover {
+    cursor: pointer;
+    background-color: var(--darSecundary);
+}
+
+.compra__img {
+    padding: 0.8rem;
 }
